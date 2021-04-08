@@ -118,12 +118,10 @@ function getInfo()
         });
         addingNewMember()
     }
-    
-
     function renderTeam() {
        fs.writeFileSync(outputpath, render(teamMember), 'utf-8');
-    
-} 
+    }  
+    getManager(); 
 getInfo();
 
 

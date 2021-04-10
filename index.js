@@ -6,17 +6,19 @@ const path = require('path');
 const fs = require('fs');
 
 
-const OUTPUT_DIR = path.resolve(_dirname, 'output');
+const OUTPUT_DIR = path.resolve(__dirname, 'output');
 const outputpath = path.join(OUTPUT_DIR, 'team.html');
+
+const render = require("./page-template")
 
 const teamMember = [];
 
-function getInfo()
+function getInfo() {
     function getManager() {
         inquirer.prompt([
             {
                 type: 'input',
-                name: 'managerName',
+                name: 'name',
                 message: "What is the manager's name", 
                 validate: nameInput => {
                     if(nameInput) {
@@ -57,7 +59,7 @@ function getInfo()
                 message: 'What is the office number?',
             },  
         ]).then(answers => {
-            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber);
+            const manager = new Manager(answers.name, answers.managerId, answers.email, answers.officeNumber);
             teamMember.push(manager);
             addingNewMember();
         })
@@ -123,11 +125,11 @@ function getInfo()
            {
                type: "checkbox",
                name: 'selectemployee',
-               message: 'What is the employee title?',
+               message: 'Which employee would you like to add?',
                choices: ['manager', 'engineer', 'intern', 'done']
            } 
         ]).then(answers => {
-            const role = answers.selectemployees;
+            const role = answers.selectemployee;
             if(role === 'manager') {
                 getManager();
             }else if (role === 'engineer') {
@@ -138,10 +140,24 @@ function getInfo()
                 renderTeam();
             }
         });
-        addingNewMember()
+
     }
     function renderTeam() {
        fs.writeFileSync(outputpath, render(teamMember), 'utf-8');
     }  
     getManager(); 
+}
 getInfo();
+
+// function init(){
+//     // TODO: Create a function to write README file
+//     inquirer.prompt(questions).then((answers) => {
+//         console.log(answers);
+    
+//         fs.writeFile('README.md', generateMarkdown(answers), (err) => 
+//             err ? console.log(err) : console.log('Readme created!')
+//         );   
+//     });
+//     }
+//     // Function call to initialize app
+//     init();

@@ -5,7 +5,7 @@ describe('engineer', () => {
   describe('Initialization', () => {
     it('returns an object that is an instance of the engineer class when called with the new keyword', () => {
       const engineer = new Engineer();
-      expect(engineer instanceof engineer).toBe(true);
+      expect(engineer instanceof Engineer).toBe(true);
     })
 
     it('it sets the name property based on constructor argument', () => {

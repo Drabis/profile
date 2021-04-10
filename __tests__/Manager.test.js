@@ -5,7 +5,7 @@ describe('manager', () => {
   describe('Initialization', () => {
     it('returns an object that is an instance of the manager class when called with the new keyword', () => {
       const manager = new Manager();
-      expect(manager instanceof manager).toBe(true);
+      expect(manager instanceof Manager).toBe(true);
     })
 
     it('it sets the name property based on constructor argument', () => {
@@ -67,9 +67,9 @@ describe('manager', () => {
     });
   });
   describe('getOfficeNumber', () => {
-    it('returns the GitHub property when the getofficeNumber() method is called', () => {
+    it('returns the officeNumber property when the getOfficeNumber() method is called', () => {
       const officeNumber = 'officeNumber';
-      const manager = new Manager("", 0, "", "", officeNumber);
+      const manager = new Manager("", 0, "", officeNumber);
 
       expect(manager.getOfficeNumber()).toBe(officeNumber);
     });

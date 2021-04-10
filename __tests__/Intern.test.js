@@ -6,7 +6,7 @@ describe('intern', () => {
   describe('Initialization', () => {
     it('returns an object that is an instance of the intern class when called with the new keyword', () => {
       const intern = new Intern();
-      expect(intern instanceof intern).toBe(true);
+      expect(intern instanceof Intern).toBe(true);
     })
 
     it('it sets the name property based on constructor argument', () => {
@@ -53,7 +53,7 @@ describe('intern', () => {
   describe('getEmail', () => {
     it('returns the email property when the getEmail() method is called', () => {
       const email = 'test@email.com';
-      const intern = new intern("", 0, email);
+      const intern = new Intern("", 0, email);
 
       expect(intern.getEmail()).toBe(email);
     });

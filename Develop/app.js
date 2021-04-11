@@ -22,10 +22,10 @@ async function init() {
 	try {
 		const answers = await inquirer.prompt(questions);
 
-                const { name, id, email, roll } = answers;
+                const { name, id, email, role } = answers;
 
-    		//Check employee's roll and create correspending class instance
-		switch (roll) {
+    		//Check employee's role and create correspending class instance
+		switch (role) {
 			case 'Manager':
 				let manager = new Manager(name, id, email, answers.officeNumber);
 				employees.push(manager);

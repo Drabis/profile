@@ -2,8 +2,8 @@ const questions = [
 	// Roll
 	{
 		type: 'list',
-		message: 'Please select the employee\'s roll in your team',
-		name: 'roll',
+		message: 'Please select the employee\'s role in your team',
+		name: 'role',
 		choices: ['Manager', 'Engineer', 'Intern'],
 	},
 	// Employee Name
@@ -48,13 +48,13 @@ const questions = [
 			return 'Please enter a valid email.';
 		},
 	},
-	// Only Prompt when answer to roll is Manager
+	// Only Prompt when answer to role is Manager
 	{
 		type: 'input',
 		name: 'officeNumber',
 		message: 'Please enter the Manager\'s Office Number',
 		when: answers => {
-			return answers.roll === 'Manager';
+			return answers.role === 'Manager';
 		},
 		validate: officeNumber => {
 			let pass = officeNumber.match(/^[0-9]+$/g);
@@ -65,13 +65,13 @@ const questions = [
 			return 'Please enter a valid Office Number.';
 		},
 	},
-	// Only Prompt when answer to roll is Engineer
+	// Only Prompt when answer to role is Engineer
 	{
 		type: 'input',
 		name: 'github',
 		message: 'Please enter the Engineer\'s Github Username',
 		when: answers => {
-			return answers.roll === 'Engineer';
+			return answers.role === 'Engineer';
 		},
 		validate: github => {
 			if (github) {
@@ -81,13 +81,13 @@ const questions = [
 			return 'Please enter the Engineer\'s Github Username.';
 		},
 	},
-	// Only Prompt when answer to roll is Intern
+	// Only Prompt when answer to role is Intern
 	{
 		type: 'input',
 		name: 'school',
 		message: 'Please enter the Intern\'s School Name',
 		when: answers => {
-			return answers.roll === 'Intern';
+			return answers.role === 'Intern';
 		},
 		validate: school => {
 			if (school) {

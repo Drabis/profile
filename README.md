@@ -1,5 +1,5 @@
 <img width="1243" alt="Screen Shot 2021-04-11 at 12 09 37 AM" src="https://user-images.githubusercontent.com/76567790/114292120-46c54680-9a5a-11eb-98a6-d98b8b28a25a.png">
-# Professional README generator
+# Team profile generator
   # Table of contents
   * [Description](#description)
   * [Installation](#installation)

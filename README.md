@@ -1,4 +1,4 @@
-<img width="1243" alt="Screen Shot 2021-04-11 at 12 09 37 AM" src="https://user-images.githubusercontent.com/76567790/114292120-46c54680-9a5a-11eb-98a6-d98b8b28a25a.png">
+
 # Team profile generator
   # Table of contents
   * [Description](#description)
@@ -6,6 +6,9 @@
   * [User Story](#userstory)
   * [ Tests ](#Tests)
   * [License](#license)
+
+
+<img width="1243" alt="Screen Shot 2021-04-11 at 12 09 37 AM" src="https://user-images.githubusercontent.com/76567790/114292120-46c54680-9a5a-11eb-98a6-d98b8b28a25a.png">
 
   ## Description
   Using the command-line application to prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. This assignment must also pass all unit tests. When the user has completed building the team, the application will create an HTML file that displays a nicely formatted team roster based on the information provided by the user.

@@ -19,7 +19,10 @@
   Click the GitHub link provided above to the APP REPO. Click on the green button that says Clone or Download and Choose how you would like to download: using the SSH/HTTPS keys or download the zip file. If using SSH/HTTPS Key: You will copy the link shown and type git clone paste URL here. If using Download ZIP: Click on Download Zip. Locate the file and double-click it to unzip the file. Locate the unzipped folder and open it
 
   ## User Story
-  As a companie owner, I want to generate a webpage that displays my team's basic info so that I have quick access to emails and GitHub profiles.
+  
+  AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
 
   ## Tests
     npm test

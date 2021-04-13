@@ -36,7 +36,7 @@ SO THAT I have quick access to their emails and GitHub profiles
   For any questions do not hesitate to reach out. 
 
   Contact me:
-  On Github: github.com/Drabis 
+  On Github: www.github.com/Drabis 
 
   Via Email: drabo.aboulaye88@gmail.com
 
